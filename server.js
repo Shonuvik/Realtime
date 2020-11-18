@@ -15,7 +15,7 @@ const io = socketio(server);
 //definir pasta estática
 app.use(express.static(path.join(__dirname, 'public')));
 
-const usersName = 'Chat Dev';
+const usersName = 'Chat Bot Marlon';
 
 //executa quando o cliente se conecta
 io.on('connection', socket =>{
@@ -28,7 +28,8 @@ io.on('connection', socket =>{
     
 
     //bem vindo novo usuário
-    socket.emit('message', formatMessage(usersName, 'Wilkommen das Realtime Message!'));
+    socket.emit('message', formatMessage(usersName, 'Bem Vindo ao Chat Bot Medical! Como posso te ajudar ? '));
+    
 
     //da um broadcast quando um usuário se conecta
     socket.broadcast.to(user.room).emit('message', formatMessage(usersName, `${user.username} beggint in chat`));
@@ -67,6 +68,6 @@ io.on('connection', socket =>{
     });
     
 });
-const PORT = 8080 || process.env.PORT;
+const PORT = 8085 || process.env.PORT;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

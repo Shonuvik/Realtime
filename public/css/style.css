@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #f09433;
-    --dark-color-a: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    --dark-color-a: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    --dark-color-a: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+	--dark-color-a: #99cfcb;
+    --dark-color-a: -moz-linear-gradient(45deg, #99cfcb 0%, #5e60c0 25%, #a3cef1 50%, #a2b6c7 75%, #3e9bec 100%);
+    --dark-color-a: -webkit-linear-gradient(45deg, #99cfcb 0%,#5e60c0 25%,#a3cef1 50%,#a2b6c7 75%,#3e9bec 100%);
+    --dark-color-a: linear-gradient(45deg, #99cfcb 0%,#5e60c0 25%,#a3cef1 50%,#a2b6c7 75%,#3e9bec 100%);
 
 	--dark-color-b: #f09433;
-    --dark-color-b: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-    --dark-color-b: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    --dark-color-b: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-	--light-color: #e6683c;
+    --dark-color-b: -moz-linear-gradient(45deg, #99cfcb 0%, #5e60c0 25%, #a3cef1 50%, #a2b6c7 75%, #3e9bec 100%);
+    --dark-color-b: -webkit-linear-gradient(45deg, #99cfcb 0%,#5e60c0 25%,#a3cef1 50%,#a2b6c7 75%,#3e9bec 100%);
+    --dark-color-b: linear-gradient(45deg, #99cfcb 0%,#5e60c0 25%,#a3cef1 50%,#a2b6c7 75%,#3e9bec 100%);
+	--light-color: #99cbcf;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
+	--btn-2: #04D361;
+	background-image: url("https://image.freepik.com/vetores-gratis/fundo-de-conceito-chatbot-com-dispositivo-movel_23-2147831564.jpg");
 }
 
 * {
@@ -24,7 +26,6 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	background: var(--light-color);
 	margin: 20px;
 }
 
@@ -38,31 +39,37 @@ a {
 
 .btn {
 	cursor: pointer;
-	padding: 5px 15px;
-	background: var(--light-color);
+	padding: 5px 10px;
+	height: 45px;
+	margin-bottom: 8px;
+	margin-left: 10px;
+	border-radius: 15px;
+	background: var(--btn-2);
 	color: var(--dark-color-a);
-	border: 0;
+	border: none;
 	font-size: 17px;
 }
 
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
+	max-width: 500px;
+	min-height: 200px;
 	background: #fff;
 	margin: 30px auto;
 	overflow: hidden;
+	border-radius: 30px;
 }
 
 .chat-header {
 	background: var(--dark-color-a);
 	color: #fff;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
 	padding: 15px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .chat-main {
@@ -73,8 +80,8 @@ a {
 .chat-sidebar {
 	background: var(--dark-color-b);
 	color: #fff;
-	padding: 20px 20px 60px;
-	overflow-y: scroll;
+	padding: 100px 20px 300px;
+	
 }
 
 .chat-sidebar h2 {
@@ -120,10 +127,13 @@ a {
 .chat-form-container {
 	padding: 20px 30px;
 	background-color: var(--dark-color-a);
+	
 }
+
 
 .chat-form-container form {
 	display: flex;
+	
 }
 
 .chat-form-container input[type='text'] {
@@ -150,6 +160,7 @@ a {
 
 .join-main {
 	padding: 30px 40px;
+	border-radius: 20px;
 	background: var(--dark-color-b);
 }
 
@@ -168,6 +179,8 @@ a {
 
 .join-main input[type='text'] {
 	font-size: 16px;
+	border-radius: 10px;
+	border: none;
 	padding: 5px;
 	height: 40px;
 	width: 100%;
